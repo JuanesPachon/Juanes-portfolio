@@ -19,16 +19,16 @@
                         <p>Open to work</p>
                     </div>
                 </div>
-                <div class="flex items-center gap-x-1 -mt-4 lg:-ml-3 lg:-mt-2">
+                <div class="flex items-center gap-x-4 -mt-4 lg:-ml-3 lg:-mt-2">
                     <a href="https://github.com/JuanesPachon" target="_blank"
                         (mouseenter)="changeGithubSrc('/assets/icons/github_icon_gold.svg')"
                         (mouseleave)="changeGithubSrc('/assets/icons/github_icon.svg')">
-                        <img [src]="githubSrc" class="w-20 h-20 lg:w-17 lg:h-17 cursor-pointer" alt="github icon">
+                        <img [src]="githubSrc" class="w-13 h-13 cursor-pointer" alt="github icon">
                     </a>
                     <a href="https://www.linkedin.com/in/juanes-pachon-web-dev/" target="_blank"
                         (mouseenter)="changeLinkedinSrc('/assets/icons/linkedin_icon_gold.svg')"
                         (mouseleave)="changeLinkedinSrc('/assets/icons/linkedin_icon.svg')">
-                        <img [src]="linkedinSrc" class="w-20 h-20 lg:w-17 lg:h-17 cursor-pointer" alt="linkedin icon">
+                        <img [src]="linkedinSrc" class="w-13 h-13 cursor-pointer" alt="linkedin icon">
                     </a>
                 </div>
             </div>
@@ -36,7 +36,26 @@
 
     </section>
 
-    <div class="flex items-center justify-center w-[90%] lg:w-full lg:px-70 my-10">
+    <div class="flex items-center justify-center w-[90%] max-w-[1024px] lg:w-full my-10">
+        <div class="h-[2px] bg-primary-gold flex-grow"></div>
+        <div class="mx-4">
+            <img src="/assets/icons/diamond_icon.svg" class="w-6 h-6" alt="diamond icon">
+        </div>
+        <div class="h-[2px] bg-primary-gold flex-grow"></div>
+    </div>
+
+    <section>
+        <h1 class="text-center text-primary-gold text-3xl lg:text-4xl font-jost font-semibold">Skills</h1>
+        <div class="flex gap-x-6 sm:gap-x-10 lg:gap-x-15 mt-8 lg:mt-10">
+            <img src="/assets/icons/javascript_icon.svg" class="lg:w-15" alt="javascript icon">
+            <img src="/assets/icons/angular_icon.svg" class="lg:w-15" alt="angular icon">
+            <img src="/assets/icons/typescript_icon.svg" class="lg:w-15" alt="typescript icon">
+            <img src="/assets/icons/node_icon.svg" class="lg:w-15" alt="node icon">
+            <img src="/assets/icons/tailwind_icon.svg" class="lg:w-15" alt="tailwind icon">
+        </div>
+    </section>
+
+    <div class="flex items-center justify-center w-[90%] max-w-[1024px] lg:w-full my-10">
         <div class="h-[2px] bg-primary-gold flex-grow"></div>
         <div class="mx-4">
             <img src="/assets/icons/diamond_icon.svg" class="w-6 h-6" alt="diamond icon">
@@ -46,10 +65,10 @@
 
     <section id="about-me">
         <h1 class="text-center text-primary-gold text-3xl lg:text-4xl font-jost font-semibold">About me</h1>
-        <div class="flex flex-col jsutify-center items-center gap-y-2 mt-8 font-jost font-semibold lg:flex-row lg:gap-x-5 lg:mx-80 lg:-my-4">
-            <p class="px-5 lg:max-w-[60%]">
+        <div class="flex flex-col jsutify-center items-center gap-y-2 mt-8 font-jost font-semibold lg:flex-row lg:gap-x-5 max-w-[1024px] lg:-my-6">
+            <p class="px-5 text-lg lg:max-w-[60%]">
                 Soy un desarrollador web full stack con especialización en frontend, enfocado en crear interfaces interactivas, rápidas
-                y accesibles. Mi enfoque se basa en construir aplicaciones mayormente (SPA) optimizadas con código modular y
+                y accesibles. Mi enfoque se basa en construir aplicaciones mayormente single page aplication (SPA) optimizadas con código modular y
                 reutilizable, priorizando un rendimiento ágil y tiempos de carga reducidos. Implemento buenas prácticas para asegurar 
                 una experiencia de calidad.
             </p>
@@ -57,7 +76,7 @@
         </div>
     </section>
 
-    <div class="flex items-center justify-center w-[90%] lg:w-full lg:px-70 my-10">
+    <div class="flex items-center justify-center w-[90%] max-w-[1024px] lg:w-full my-10">
         <div class="h-[2px] bg-primary-gold flex-grow"></div>
         <div class="mx-4">
             <img src="/assets/icons/diamond_icon.svg" class="w-6 h-6" alt="diamond icon">

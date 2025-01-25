@@ -18,10 +18,12 @@ export class HeaderComponent {
     if (element) {
       const offsetTop = element.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({
-        top: offsetTop - 112,
+        top: offsetTop - 160,
         behavior: 'smooth',
       });
     }
+
+    this.toggleMenu();
   
   }
 

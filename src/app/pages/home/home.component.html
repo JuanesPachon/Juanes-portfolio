@@ -1,4 +1,4 @@
-<app-header/>
+<app-header />
 
 <main id="top" class="mt-28 flex flex-col items-center">
 
@@ -6,7 +6,7 @@
 
         <div class="flex flex-col items-center lg:flex-row lg:gap-x-12 lg:mt-12 lg:mb-6">
             <img src="/assets/icons/juanes_logo.svg" alt="logo" class="w-22 h-22 mb-5 lg:w-60 lg:h-60 lg:order-2 lg:-mr-7
-            drop-shadow-[0_0_5px_#EAC85F] lg:drop-shadow-[0_0_10px_#EAC85F]">
+            drop-shadow-[0_0_5px_#EAC85F] lg:drop-shadow-[0_0_10px_#EAC85F] -z-10">
             <div class="flex flex-col items-center lg:items-start gap-y-7 lg:gap-y-7">
                 <h1 class="text-3xl lg:text-5xl text-center">Juan Esteban Pachón Ruiz</h1>
                 <h2 class="text-2xl -mt-4 lg:-mt-2 lg:text-4xl text-center lg:text-left text-primary-gold">Full-stack developer</h2>
@@ -20,16 +20,49 @@
                     </div>
                 </div>
                 <div class="flex items-center gap-x-1 -mt-4 lg:-ml-3 lg:-mt-2">
-                    <a href="https://github.com/JuanesPachon" target="_blank" (mouseenter)="changeGithubSrc('/assets/icons/github_icon_gold.svg')" (mouseleave)="changeGithubSrc('/assets/icons/github_icon.svg')">
+                    <a href="https://github.com/JuanesPachon" target="_blank"
+                        (mouseenter)="changeGithubSrc('/assets/icons/github_icon_gold.svg')"
+                        (mouseleave)="changeGithubSrc('/assets/icons/github_icon.svg')">
                         <img [src]="githubSrc" class="w-20 h-20 lg:w-17 lg:h-17 cursor-pointer" alt="github icon">
                     </a>
-                    <a href="https://www.linkedin.com/in/juanes-pachon-web-dev/" target="_blank" (mouseenter)="changeLinkedinSrc('/assets/icons/linkedin_icon_gold.svg')" (mouseleave)="changeLinkedinSrc('/assets/icons/linkedin_icon.svg')">
+                    <a href="https://www.linkedin.com/in/juanes-pachon-web-dev/" target="_blank"
+                        (mouseenter)="changeLinkedinSrc('/assets/icons/linkedin_icon_gold.svg')"
+                        (mouseleave)="changeLinkedinSrc('/assets/icons/linkedin_icon.svg')">
                         <img [src]="linkedinSrc" class="w-20 h-20 lg:w-17 lg:h-17 cursor-pointer" alt="linkedin icon">
                     </a>
                 </div>
             </div>
         </div>
-        
+
     </section>
+
+    <div class="flex items-center justify-center w-[90%] lg:w-full lg:px-70 my-10">
+        <div class="h-[2px] bg-primary-gold flex-grow"></div>
+        <div class="mx-4">
+            <img src="/assets/icons/diamond_icon.svg" class="w-6 h-6" alt="diamond icon">
+        </div>
+        <div class="h-[2px] bg-primary-gold flex-grow"></div>
+    </div>
+
+    <section id="about-me">
+        <h1 class="text-center text-primary-gold text-3xl lg:text-4xl font-jost font-semibold">About me</h1>
+        <div class="flex flex-col jsutify-center items-center gap-y-2 mt-8 font-jost font-semibold lg:flex-row lg:gap-x-5 lg:mx-80 lg:-my-4">
+            <p class="px-5 lg:max-w-[60%]">
+                Soy un desarrollador web full stack con especialización en frontend, enfocado en crear interfaces interactivas, rápidas
+                y accesibles. Mi enfoque se basa en construir aplicaciones mayormente (SPA) optimizadas con código modular y
+                reutilizable, priorizando un rendimiento ágil y tiempos de carga reducidos. Implemento buenas prácticas para asegurar 
+                una experiencia de calidad.
+            </p>
+            <img src="/assets/images/profile_portfolio.svg" class="w-[80%] h-auto" alt="profile">
+        </div>
+    </section>
+
+    <div class="flex items-center justify-center w-[90%] lg:w-full lg:px-70 my-10">
+        <div class="h-[2px] bg-primary-gold flex-grow"></div>
+        <div class="mx-4">
+            <img src="/assets/icons/diamond_icon.svg" class="w-6 h-6" alt="diamond icon">
+        </div>
+        <div class="h-[2px] bg-primary-gold flex-grow"></div>
+    </div>
 
 </main>

@@ -18,7 +18,7 @@ export class HeaderComponent {
     if (element) {
       const offsetTop = element.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({
-        top: offsetTop - 100,
+        top: offsetTop - 112,
         behavior: 'smooth',
       });
     }

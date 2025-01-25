@@ -1,0 +1,35 @@
+<app-header/>
+
+<main id="top" class="mt-28 flex flex-col items-center">
+
+    <section class="flex flex-col items-center gap-y-8 mt-5 font-jost font-semibold">
+
+        <div class="flex flex-col items-center lg:flex-row lg:gap-x-12 lg:mt-12 lg:mb-6">
+            <img src="/assets/icons/juanes_logo.svg" alt="logo" class="w-22 h-22 mb-5 lg:w-60 lg:h-60 lg:order-2 lg:-mr-7
+            drop-shadow-[0_0_5px_#EAC85F] lg:drop-shadow-[0_0_10px_#EAC85F]">
+            <div class="flex flex-col items-center lg:items-start gap-y-7 lg:gap-y-7">
+                <h1 class="text-3xl lg:text-5xl text-center">Juan Esteban Pachón Ruiz</h1>
+                <h2 class="text-2xl -mt-4 lg:-mt-2 lg:text-4xl text-center lg:text-left text-primary-gold">Full-stack developer</h2>
+                <div class="flex flex-col items-center gap-y-6 lg:flex-row lg:gap-x-8">
+                    <button class="bg-primary-blue py-3 px-7 font-poppins rounded-4xl border-2 border-primary-gold hover:bg-hover-blue transition-colors duration-300 ease-in-out cursor-pointer">
+                        Download CV
+                    </button>
+                    <div class="flex items-center gap-x-2">
+                        <img src="assets/icons/open_work.svg" class="w-8 h-8" alt="open to work icon">
+                        <p>Open to work</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-x-1 -mt-4 lg:-ml-3 lg:-mt-2">
+                    <a href="https://github.com/JuanesPachon" target="_blank" (mouseenter)="changeGithubSrc('/assets/icons/github_icon_gold.svg')" (mouseleave)="changeGithubSrc('/assets/icons/github_icon.svg')">
+                        <img [src]="githubSrc" class="w-20 h-20 lg:w-17 lg:h-17 cursor-pointer" alt="github icon">
+                    </a>
+                    <a href="https://www.linkedin.com/in/juanes-pachon-web-dev/" target="_blank" (mouseenter)="changeLinkedinSrc('/assets/icons/linkedin_icon_gold.svg')" (mouseleave)="changeLinkedinSrc('/assets/icons/linkedin_icon.svg')">
+                        <img [src]="linkedinSrc" class="w-20 h-20 lg:w-17 lg:h-17 cursor-pointer" alt="linkedin icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+</main>

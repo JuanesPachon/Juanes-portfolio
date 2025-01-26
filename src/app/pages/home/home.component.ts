@@ -1,6 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { HeaderComponent } from '../../shared/header/header.component';
 import { ProjectCardComponent } from "../../components/project-card/project-card.component";
+import { ProjectService } from '../../services/project.service';
+import { IProject } from '../../models/project.interface';
+import { error } from 'console';
 
 @Component({
   selector: 'app-home',
@@ -10,6 +13,8 @@ import { ProjectCardComponent } from "../../components/project-card/project-card
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+
+  private readonly projectService = inject(ProjectService);
 
   // Source images when hovering
 
@@ -22,5 +27,20 @@ export class HomeComponent {
   changeLinkedinSrc(source: string): void {
     this.linkedinSrc = source;
   }
+
+  // Get projects info
+
+  ngOnInit(): void {
+    this.projectService.getProjects().subscribe({
+      next: (projects: IProject[]) => {
+        this.projects = projects;
+      },
+      error: (err: any) => {
+        console.log(err);
+      }
+    }) 
+  }
+
+  projects: IProject[] = [];
 
 }

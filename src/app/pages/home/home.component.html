@@ -65,12 +65,12 @@
 
     <section id="about-me">
         <h2 class="text-center text-primary-gold text-3xl lg:text-4xl font-jost font-semibold">About me</h2>
-        <div class="flex flex-col jsutify-center items-center gap-y-2 mt-8 font-jost font-semibold lg:flex-row lg:gap-x-5 max-w-[1024px] lg:-my-6">
-            <p class="px-5 text-lg lg:max-w-[60%] font-poppins">
-                Soy un desarrollador web full stack con especialización en frontend, enfocado en crear interfaces interactivas, rápidas
-                y accesibles. Mi enfoque se basa en construir aplicaciones mayormente single page aplication (SPA) optimizadas con código modular y
-                reutilizable, priorizando un rendimiento ágil y tiempos de carga reducidos. Implemento buenas prácticas para asegurar 
-                una experiencia de calidad.
+        <div class="flex flex-col jsutify-center items-center gap-y-2 mt-8 font-jost font-semibold md:flex-row lg:gap-x-5 md:mx-6 lg:mx-0 max-w-[1024px] lg:-my-6">
+            <p class="px-5 text-lg md:max-w-[60%] font-poppins">
+                I am a full stack web developer with specialization in frontend, focused on creating fast, interactive interfaces.
+                and accessible. My approach is based on building mostly single page applications (SPA) optimized with modular code and
+                reusable, prioritizing agile performance and reduced loading times. I implement good practices to ensure 
+                a quality experience.
             </p>
             <img src="/assets/images/profile_portfolio.svg" class="w-[80%] h-auto" alt="profile">
         </div>
@@ -84,12 +84,21 @@
         <div class="h-[2px] bg-primary-gold flex-grow"></div>
     </div>
 
-    <section>
+    <section id="projects">
         <h2 class="text-center text-primary-gold text-3xl lg:text-4xl font-jost font-semibold">Featured Projects</h2>
-        <div class="my-10 mx-6 flex flex-col gap-y-10 lg:grid lg:grid-cols-2 lg:gap-x-10 lg:max-w-[1024px]">
-            <app-project-card/>
-            <app-project-card/>
+        <div class="my-10 mx-6 flex flex-col gap-y-10 md:grid md:grid-cols-2 md:gap-x-10 lg:max-w-[1024px]">
+            @for (project of projects; track project.id) {
+                <app-project-card [project]="project" />
+            }
         </div>
     </section>
+
+    <div class="flex items-center justify-center w-[90%] max-w-[1024px] lg:w-full my-10">
+        <div class="h-[2px] bg-primary-gold flex-grow"></div>
+        <div class="mx-4">
+            <img src="/assets/icons/diamond_icon.svg" class="w-6 h-6" alt="diamond icon">
+        </div>
+        <div class="h-[2px] bg-primary-gold flex-grow"></div>
+    </div>
 
 </main>

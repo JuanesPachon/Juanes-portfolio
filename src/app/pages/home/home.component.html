@@ -86,7 +86,7 @@
 
     <section id="projects">
         <h2 class="text-center text-primary-gold text-3xl lg:text-4xl font-jost font-semibold">Featured Projects</h2>
-        <div class="my-10 mx-6 flex flex-col gap-y-10 md:grid md:grid-cols-2 md:gap-x-10 lg:max-w-[1024px]">
+        <div class="my-10 mx-6 flex flex-col gap-y-10 md:grid md:grid-cols-2 md:gap-x-10 lg:max-w-[1024px] z-10">
             @for (project of projects; track project.id) {
                 <app-project-card [project]="project" />
             }

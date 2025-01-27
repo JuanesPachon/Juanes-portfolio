@@ -7,7 +7,7 @@
             [ngClass]="{'bg-hover-blue border-2 border-gray-600 rounded-2xl p-1': isMenuOpen()}">
             <img class="w-10 h-10" src="/assets/icons/menu.svg" alt="menu">
         </div>
-        <img class="lg:hidden w-9 h-9 drop-shadow-[0_0_3px_#EAC85F]" src="/assets/icons/juanes_logo.svg" alt="logo">
+        <img (click)="scrollToSection('top')" class="lg:hidden w-9 h-9 drop-shadow-[0_0_3px_#EAC85F]" src="/assets/icons/juanes_logo.svg" alt="logo">
         <!-- desktop content -->
         <div class="hidden lg:flex justify-around items-center w-full cursor-pointer font-poppins">
             <a class="relative font-bold group" (click)="scrollToSection('top')">
@@ -36,7 +36,7 @@
 </header>
 
 <!-- Mobile menu -->
-<div class="fixed w-[90%] lg:hidden mx-5 bg-primary-blue rounded-4xl border-2 border-primary-gold transition-all duration-300 ease-in-out"
+<div class="fixed w-[90%] lg:hidden mx-5 bg-primary-blue rounded-4xl border-2 border-primary-gold transition-all duration-300 ease-in-out z-10"
     [ngClass]="isMenuOpen() ? 'opacity-100 translate-y-0' : 'opacity-0 hidden -translate-y-20'">
     <div class="flex flex-col items-center text-xl">
 

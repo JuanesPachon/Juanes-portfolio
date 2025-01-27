@@ -23,7 +23,7 @@ export class HeaderComponent {
       });
     }
 
-    this.toggleMenu();
+    this.isMenuOpen.set(false);
   
   }
 

@@ -5,11 +5,12 @@ import { PortfolioDataService } from '../../services/portfolio-data.service';
 import { IProject } from '../../models/project.interface';
 import { IExperience } from '../../models/experience-item.interface';
 import { ExperienceItemComponent } from "../../components/experience-item/experience-item.component";
+import { FooterComponent } from "../../shared/footer/footer.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent, ProjectCardComponent, ExperienceItemComponent],
+  imports: [HeaderComponent, ProjectCardComponent, ExperienceItemComponent, FooterComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

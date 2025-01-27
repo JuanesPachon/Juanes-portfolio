@@ -11,6 +11,30 @@
     --font-jost: "Jost", serif;
     --font-poppins: "Poppins", serif;
 
+    --animate-drop-shadow-blink: drop-shadow-blink 1.5s infinite;
+    --animate-slide-in: slide-in 1s ease-out;
+
+    @keyframes drop-shadow-blink {
+        0%,
+        100% {
+          filter: drop-shadow(0 0 2px #EAC85F);
+        }
+        50% {
+            filter: none;
+        }
+    }
+
+    @keyframes slide-in {
+        0% {
+          transform: translateX(50%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+    }
+
 }
 
 *::-webkit-scrollbar {

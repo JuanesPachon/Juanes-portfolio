@@ -33,3 +33,8 @@
     background: #ccae53;
 }
 
+::selection {
+    background-color: var(--color-primary-gold);
+    color: var(--color-primary-black);
+}
+

@@ -101,4 +101,19 @@
         <div class="h-[2px] bg-primary-gold flex-grow"></div>
     </div>
 
+    <section id="experience" class="mb-2">
+        <h2 class="text-center text-primary-gold text-3xl lg:text-4xl font-jost font-semibold mb-7">Experience</h2>
+        @for (experience of experiences; track experience.id) {
+            <app-experience-item [experience]="experience" />
+        }
+    </section>
+
+    <div class="flex items-center justify-center w-[90%] max-w-[1024px] lg:w-full my-10">
+        <div class="h-[2px] bg-primary-gold flex-grow"></div>
+        <div class="mx-4">
+            <img src="/assets/icons/diamond_icon.svg" class="w-6 h-6" alt="diamond icon">
+        </div>
+        <div class="h-[2px] bg-primary-gold flex-grow"></div>
+    </div>
+
 </main>

@@ -1,20 +1,21 @@
 import { Component, inject } from '@angular/core';
 import { HeaderComponent } from '../../shared/header/header.component';
 import { ProjectCardComponent } from "../../components/project-card/project-card.component";
-import { ProjectService } from '../../services/project.service';
+import { PortfolioDataService } from '../../services/portfolio-data.service';
 import { IProject } from '../../models/project.interface';
-import { error } from 'console';
+import { IExperience } from '../../models/experience-item.interface';
+import { ExperienceItemComponent } from "../../components/experience-item/experience-item.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent, ProjectCardComponent],
+  imports: [HeaderComponent, ProjectCardComponent, ExperienceItemComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
 
-  private readonly projectService = inject(ProjectService);
+  private readonly portfolioService = inject(PortfolioDataService);
 
   // Source images when hovering
 
@@ -28,10 +29,10 @@ export class HomeComponent {
     this.linkedinSrc = source;
   }
 
-  // Get projects info
+  // Get projects and experiences data
 
   ngOnInit(): void {
-    this.projectService.getProjects().subscribe({
+    this.portfolioService.getProjects().subscribe({
       next: (projects: IProject[]) => {
         this.projects = projects;
       },
@@ -39,8 +40,18 @@ export class HomeComponent {
         console.log(err);
       }
     }) 
+
+    this.portfolioService.getExperiences().subscribe({
+      next: (experiences: IExperience[]) => {
+        this.experiences = experiences;
+      },
+      error: (err: any) => {
+        console.log(err);
+      }
+    })
   }
 
   projects: IProject[] = [];
+  experiences: IExperience[] = [];
 
 }

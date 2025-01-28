@@ -1,10 +1,11 @@
 import { Component, Input, SimpleChanges } from '@angular/core';
 import { IProject } from '../../models/project.interface';
+import { RouterLinkWithHref } from '@angular/router';
 
 @Component({
   selector: 'app-project-card',
   standalone: true,
-  imports: [],
+  imports: [RouterLinkWithHref],
   templateUrl: './project-card.component.html',
   styleUrl: './project-card.component.css'
 })
@@ -16,7 +17,7 @@ export class ProjectCardComponent {
     description_en: '',
     description_es: '',
     technologies: [],
-    image: '',
+    images: [],
     url: '',
     github_url: '',
   };

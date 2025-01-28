@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { IProject } from '../models/project.interface';
 import { IExperience } from '../models/experience-item.interface';
 
@@ -14,6 +14,12 @@ export class PortfolioDataService {
 
   getProjects(): Observable<IProject[]> {
     return this.http.get<IProject[]>(`${this.apiUrl}/projects.json`);
+  }
+
+  getProjectById(id: string): Observable<IProject | undefined> {
+    return this.http.get<IProject[]>(`${this.apiUrl}/projects.json`).pipe(
+      map((projects: IProject[]) => projects.find(project => project.id === id))
+    );
   }
 
   getExperiences(): Observable<IExperience[]> {

@@ -9,27 +9,27 @@
         </div>
         <img (click)="scrollToSection('top')" class="lg:hidden w-9 h-9 drop-shadow-[0_0_3px_#EAC85F]" src="/assets/icons/juanes_logo.svg" alt="logo">
         <!-- desktop content -->
-        <div class="hidden lg:flex justify-around items-center w-full cursor-pointer font-poppins">
-            <a class="relative font-bold group" (click)="scrollToSection('top')">
+        <div class="hidden lg:flex justify-around items-center w-full font-poppins">
+            <button class="cursor-pointer relative font-bold group" (click)="scrollToSection('top')">
                 Home
                 <span class="absolute left-0 -bottom-1 h-[0.2rem] w-full scale-x-0 bg-primary-gold transition-transform duration-300 ease-out group-hover:scale-x-100"></span>
-            </a>
-            <a class="relative font-bold group" (click)="scrollToSection('about-me')">
+            </button>
+            <button class="cursor-pointer relative font-bold group" (click)="scrollToSection('about-me')">
                 About me
                 <span class="absolute left-0 -bottom-1 h-[0.2rem] w-full scale-x-0 bg-primary-gold transition-transform duration-300 ease-out group-hover:scale-x-100"></span>
-            </a>
-            <a class="relative font-bold group" (click)="scrollToSection('projects')">
+            </button>
+            <button class="cursor-pointer relative font-bold group" (click)="scrollToSection('projects')">
                 Projects
                 <span class="absolute left-0 -bottom-1 h-[0.2rem] w-full scale-x-0 bg-primary-gold transition-transform duration-300 ease-out group-hover:scale-x-100"></span>
-            </a>
-            <a class="relative font-bold group" (click)="scrollToSection('experience')">
+            </button>
+            <button class="cursor-pointer relative font-bold group" (click)="scrollToSection('experience')">
                 Experience
                 <span class="absolute left-0 -bottom-1 h-[0.2rem] w-full scale-x-0 bg-primary-gold transition-transform duration-300 ease-out group-hover:scale-x-100"></span>
-            </a>
-            <a class="relative font-bold group" (click)="scrollToSection('contact')">
+            </button>
+            <button class="cursor-pointer relative font-bold group" (click)="scrollToSection('contact')">
                 Contact
                 <span class="absolute left-0 -bottom-1 h-[0.2rem] w-full scale-x-0 bg-primary-gold transition-transform duration-300 ease-out group-hover:scale-x-100"></span>
-            </a>
+            </button>
         </div>
 
     </nav>
@@ -39,29 +39,29 @@
 <div class="fixed w-[90%] lg:hidden mx-5 bg-primary-blue rounded-4xl border-2 border-primary-gold transition-all transition-discrete duration-300 ease-in-out z-10"
     [ngClass]="isMenuOpen() ? 'opacity-100 ' : 'opacity-0 hidden'">
     <div class="flex flex-col items-center text-xl font-jost font-semibold">
-        <a class="w-full py-4 text-center hover:bg-hover-blue transition-colors duration-500 ease-in-out rounded-t-4xl relative"
+        <button class="w-full py-4 text-center hover:bg-hover-blue transition-colors duration-500 ease-in-out rounded-t-4xl relative"
             (click)="scrollToSection('top')">
             Home
             <div class="absolute bottom-0 left-4 right-4 border-b-2 border-primary-gold"></div>
-        </a>
-        <a class="w-full py-4 text-center hover:bg-hover-blue transition-colors duration-500 ease-in-out relative"
+        </button>
+        <button class="w-full py-4 text-center hover:bg-hover-blue transition-colors duration-500 ease-in-out relative"
             (click)="scrollToSection('about-me')">
             About me
             <div class="absolute bottom-0 left-4 right-4 border-b-2 border-primary-gold"></div>
-        </a>
-        <a class="w-full py-4 text-center hover:bg-hover-blue transition-colors duration-500 ease-in-out relative"
+        </button>
+        <button class="w-full py-4 text-center hover:bg-hover-blue transition-colors duration-500 ease-in-out relative"
             (click)="scrollToSection('projects')">
             Projects
             <div class="absolute bottom-0 left-4 right-4 border-b-2 border-primary-gold"></div>
-        </a>
-        <a class="w-full py-4 text-center hover:bg-hover-blue transition-colors duration-500 ease-in-out relative"
+        </button>
+        <button class="w-full py-4 text-center hover:bg-hover-blue transition-colors duration-500 ease-in-out relative"
             (click)="scrollToSection('experience')">
             Experience
             <div class="absolute bottom-0 left-4 right-4 border-b-2 border-primary-gold"></div>
-        </a>
-        <a class="w-full py-4 text-center hover:bg-hover-blue transition-colors duration-500 ease-in-out rounded-b-4xl"
+        </button>
+        <button class="w-full py-4 text-center hover:bg-hover-blue transition-colors duration-500 ease-in-out rounded-b-4xl"
             (click)="scrollToSection('contact')">
             Contact
-        </a>
+        </button>
     </div>
 </div>

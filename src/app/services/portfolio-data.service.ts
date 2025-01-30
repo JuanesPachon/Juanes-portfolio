@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { inject, Injectable } from '@angular/core';
+import { inject, Injectable, signal } from '@angular/core';
 import { map, Observable } from 'rxjs';
 import { IProject } from '../models/project.interface';
 import { IExperience } from '../models/experience-item.interface';
@@ -8,6 +8,10 @@ import { IExperience } from '../models/experience-item.interface';
   providedIn: 'root'
 })
 export class PortfolioDataService {
+
+  // Sidebar signal
+
+  isMenuOpen = signal(false); 
 
   private readonly apiUrl = 'https://kilker1.github.io/Portfolio-Database';
   private http = inject(HttpClient);

@@ -1,23 +1,21 @@
-import { NgClass } from '@angular/common';
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { PortfolioDataService } from '../../services/portfolio-data.service';
-import { SidebarComponent } from '../sidebar/sidebar.component';
+import { NgClass } from '@angular/common';
 
 @Component({
-  selector: 'app-header',
+  selector: 'app-sidebar',
   standalone: true,
-  imports: [SidebarComponent,NgClass],
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  imports: [NgClass],
+  templateUrl: './sidebar.component.html',
+  styleUrl: './sidebar.component.css',
 })
-export class HeaderComponent {
+export class SidebarComponent {
 
   private portfolioService = inject(PortfolioDataService);
 
   // scroll to section logic
 
   scrollToSection(sectionId: string): void {
-      
     const element = document.getElementById(sectionId);
     if (element) {
       const offsetTop = element.getBoundingClientRect().top + window.scrollY;
@@ -28,15 +26,10 @@ export class HeaderComponent {
     }
 
     this.isMenuOpen.set(false);
-  
   }
 
   // open Mobile menu logic
 
   isMenuOpen = this.portfolioService.isMenuOpen;
-
-  toggleMenu(): void {
-    this.isMenuOpen.update((value) => !value);
-  }
 
 }

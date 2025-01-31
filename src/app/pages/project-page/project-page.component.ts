@@ -24,8 +24,8 @@ export class ProjectPageComponent {
           this.project = project;
         }
       },
-      error: (err: any) => {
-        console.log(err);
+      error: (error) => {
+        console.log("It's not possible to get the project");
       }
     })
   }

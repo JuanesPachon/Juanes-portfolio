@@ -3,11 +3,10 @@ import { IProject } from '../../models/project.interface';
 import { RouterLinkWithHref } from '@angular/router';
 
 @Component({
-  selector: 'app-project-card',
-  standalone: true,
-  imports: [RouterLinkWithHref],
-  templateUrl: './project-card.component.html',
-  styleUrl: './project-card.component.css'
+    selector: 'app-project-card',
+    imports: [RouterLinkWithHref],
+    templateUrl: './project-card.component.html',
+    styleUrl: './project-card.component.css'
 })
 export class ProjectCardComponent {
 

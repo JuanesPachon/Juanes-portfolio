@@ -4,11 +4,10 @@ import { PortfolioDataService } from '../../services/portfolio-data.service';
 import { SidebarComponent } from '../sidebar/sidebar.component';
 
 @Component({
-  selector: 'app-header',
-  standalone: true,
-  imports: [SidebarComponent,NgClass],
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+    selector: 'app-header',
+    imports: [SidebarComponent, NgClass],
+    templateUrl: './header.component.html',
+    styleUrl: './header.component.css'
 })
 export class HeaderComponent {
 

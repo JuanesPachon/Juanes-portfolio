@@ -1,15 +1,15 @@
 <header class="fixed top-0 z-10 w-full lg:mx-auto">
     <nav
-        class="flex justify-between items-center p-3 lg:p-5 px-7 m-5 mx-3 max-w-4xl lg:mx-auto bg-primary-blue/75 backdrop-blur-lg rounded-4xl border-2 border-primary-gold">
+        class="flex justify-between items-center p-3 md:p-5 px-7 m-5 mx-auto max-w-4xl bg-primary-blue/75 backdrop-blur-lg rounded-4xl border-2 border-primary-gold">
 
         <!-- mobile content -->
-        <div (click)="toggleMenu()" class="flex justify-center w-12 h-12 items-center lg:hidden cursor-pointer"
+        <div (click)="toggleMenu()" class="flex justify-center w-12 h-12 items-center md:hidden cursor-pointer"
             [ngClass]="{'bg-hover-blue border-2 border-gray-600 rounded-2xl p-1': isMenuOpen()}">
             <img class="w-10 h-10" src="/assets/icons/menu.svg" alt="menu">
         </div>
-        <img (click)="scrollToSection('top')" class="lg:hidden w-9 h-9 drop-shadow-[0_0_3px_#EAC85F]" src="/assets/icons/juanes_logo.svg" alt="logo">
+        <img (click)="scrollToSection('top')" class="md:hidden w-9 h-9 drop-shadow-[0_0_3px_#EAC85F]" src="/assets/icons/juanes_logo.svg" alt="logo">
         <!-- desktop content -->
-        <div class="hidden lg:flex justify-around items-center w-full font-poppins">
+        <div class="hidden md:flex justify-around items-center w-full font-poppins">
             <button class="cursor-pointer relative font-bold group" (click)="scrollToSection('top')">
                 Home
                 <span class="absolute left-0 -bottom-1 h-[0.2rem] w-full scale-x-0 bg-primary-gold transition-transform duration-300 ease-out group-hover:scale-x-100"></span>

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { IExperience } from '../../models/experience-item.interface';
 
 @Component({
@@ -10,13 +10,6 @@ import { IExperience } from '../../models/experience-item.interface';
 })
 export class ExperienceItemComponent {
 
-  @Input() experience: IExperience = {
-    id: '',
-    name: '',
-    date_es: '',
-    date_en: '',
-    description_en: '',
-    description_es: '',
-  };
+  experience = input.required<IExperience>();
 
 }

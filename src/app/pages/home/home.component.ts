@@ -8,11 +8,10 @@ import { ExperienceItemComponent } from "../../components/experience-item/experi
 import { FooterComponent } from "../../shared/footer/footer.component";
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [HeaderComponent, ProjectCardComponent, ExperienceItemComponent, FooterComponent],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+    selector: 'app-home',
+    imports: [HeaderComponent, ProjectCardComponent, ExperienceItemComponent, FooterComponent],
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.css'
 })
 export class HomeComponent {
 

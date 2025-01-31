@@ -5,11 +5,10 @@ import { IProject } from '../../models/project.interface';
 import { PortfolioDataService } from '../../services/portfolio-data.service';
 
 @Component({
-  selector: 'app-project-page',
-  standalone: true,
-  imports: [FooterComponent, RouterLinkWithHref],
-  templateUrl: './project-page.component.html',
-  styleUrl: './project-page.component.css'
+    selector: 'app-project-page',
+    imports: [FooterComponent, RouterLinkWithHref],
+    templateUrl: './project-page.component.html',
+    styleUrl: './project-page.component.css'
 })
 export class ProjectPageComponent {
 

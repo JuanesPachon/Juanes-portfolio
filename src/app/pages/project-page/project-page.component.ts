@@ -1,4 +1,4 @@
-import { Component, inject, Input } from '@angular/core';
+import { Component, inject, input, Input } from '@angular/core';
 import { FooterComponent } from "../../shared/footer/footer.component";
 import { RouterLinkWithHref } from '@angular/router';
 import { IProject } from '../../models/project.interface';
@@ -15,10 +15,9 @@ export class ProjectPageComponent {
 
   private readonly portfolioService = inject(PortfolioDataService);
 
-  @Input() id: string = "";
-
+  id = input.required<string>();
   ngOnInit(): void {
-    this.portfolioService.getProjectById(this.id).subscribe({
+    this.portfolioService.getProjectById(this.id()).subscribe({
       next: (project: IProject | undefined) => {
         if (project) {
           this.project = project;

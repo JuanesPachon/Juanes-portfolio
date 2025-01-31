@@ -1,23 +1,29 @@
-<div class="mx-auto bg-white/10 backdrop-blur-[2px] rounded-2xl shadow-lg border-3 border-primary-gold overflow-hidden md:max-h-[550px]">
-    <img [src]="project.images[0]" class="w-full aspect-[16/8] object-cover" alt="project image">
-    <div class="p-6 font-jost">
-        <h2 class="text-2xl font-bold text-primary-gold mb-2 line-clamp-1">{{ project.name }}</h2>
-        <p class="text-sm line-clamp-4 font-poppins">{{ project.description_en }}</p>
+@let projectInfo = project();
 
-        <div class="flex items-center gap-2 mt-4 text-sm">
-            @for (item of mainTechnologies; track item) {
-                <span class="px-3 py-1 bg-primary-black rounded-full">{{ item }}</span>
-            }
-            <span class="px-3 py-px bg-primary-black rounded-full text-primary-gold font-bold text-lg"><p class="-mt-[2px]">+</p></span>
-        </div>
+@if (projectInfo) {
 
-        <div class="mt-6 pb-1 flex flex-col gap-y-5 md:flex-row md:gap-x-5">
-            <a [href]="project.url" target="_blank" class="text-center w-full py-2 rounded-lg bg-primary-gold text-black font-semibold hover:bg-hover-gold transition-colors duration-300 ease-in-out cursor-pointer">
-                Live Demo
-            </a>
-            <a [routerLink]="['/project', project.id]" class="text-center w-full py-2 rounded-lg bg-primary-blue font-semibold hover:bg-hover-blue border-2 border-primary-gold transition-colors duration-300 ease-in-out cursor-pointer">
-                View details
-            </a>
+    <div class="mx-auto bg-white/10 backdrop-blur-[2px] rounded-2xl shadow-lg border-3 border-primary-gold overflow-hidden md:max-h-[550px]">
+        <img [src]="projectInfo.images[0]" class="w-full aspect-[16/8] object-cover" alt="project image">
+        <div class="p-6 font-jost">
+            <h2 class="text-2xl font-bold text-primary-gold mb-2 line-clamp-1">{{ projectInfo.name }}</h2>
+            <p class="text-sm line-clamp-4 font-poppins">{{ projectInfo.description_en }}</p>
+    
+            <div class="flex items-center gap-2 mt-4 text-sm">
+                @for (item of mainTechnologies; track item) {
+                    <span class="px-3 py-1 bg-primary-black rounded-full">{{ item }}</span>
+                }
+                <span class="px-3 py-px bg-primary-black rounded-full text-primary-gold font-bold text-lg"><p class="-mt-[2px]">+</p></span>
+            </div>
+    
+            <div class="mt-6 pb-1 flex flex-col gap-y-5 md:flex-row md:gap-x-5">
+                <a [href]="projectInfo.url" target="_blank" class="text-center w-full py-2 rounded-lg bg-primary-gold text-black font-semibold hover:bg-hover-gold border-2 border-primary-gold transition-colors duration-300 ease-in-out cursor-pointer">
+                    Live Demo
+                </a>
+                <a [routerLink]="['/project', projectInfo.id]" class="text-center w-full py-2 rounded-lg bg-primary-blue font-semibold hover:bg-hover-blue border-2 border-primary-gold transition-colors duration-300 ease-in-out cursor-pointer">
+                    View details
+                </a>
+            </div>
         </div>
     </div>
-</div>
+
+} 

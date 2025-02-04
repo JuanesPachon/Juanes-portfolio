@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import { IExperience } from '../../models/experience-item.interface';
+import { IExperience } from '../../../../models/experience-item.interface';
 
 @Component({
     selector: 'app-experience-item',

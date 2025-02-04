@@ -1,0 +1,33 @@
+<section class="flex flex-col items-center gap-y-8 mt-5 font-jost font-semibold lg:gap-y-12 3xl:mt-10">
+
+    <div class="flex flex-col items-center lg:flex-row lg:gap-x-20 lg:mt-10 lg:mb-6">
+        <img rel="preload" src="/assets/icons/juanes_logo.svg" alt="logo" class="w-22 h-22 mb-5 lg:w-80 lg:h-80 lg:order-2 lg:-mr-7 
+        drop-shadow-[0_0_5px_#EAC85F] lg:drop-shadow-[0_0_10px_#EAC85F] -z-10 lg:animate-slide-in">
+        <div class="flex flex-col items-center lg:items-start gap-y-7 lg:gap-y-7 lg:-mt-6">
+            <h1 class="text-3xl lg:text-5xl 3xl:text-6xl">Juan Esteban Pachón Ruiz</h1>
+            <h2 class="text-2xl -mt-4 lg:-mt-2 lg:text-4xl 3xl:text-5xl text-center lg:text-left text-primary-gold">Full-stack developer</h2>
+            <div class="flex flex-col items-center gap-y-6 lg:flex-row lg:gap-x-8">
+                <button class="bg-primary-blue py-3 px-7 font-poppins rounded-4xl border-2 border-primary-gold hover:bg-hover-blue transition-colors duration-300 ease-in-out cursor-pointer">
+                    Download CV
+                </button>
+                <div class="flex items-center gap-x-2">
+                    <img src="assets/icons/open_work.svg" class="w-8 h-8 animate-drop-shadow-blink" alt="open to work icon">
+                    <p class="3xl:text-lg">Open to work</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-x-4 -mt-4 lg:-ml-1 lg:-mt-2">
+                <a href="https://github.com/JuanesPachon" target="_blank"
+                    (mouseenter)="changeGithubSrc('/assets/icons/github_icon_gold.svg')"
+                    (mouseleave)="changeGithubSrc('/assets/icons/github_icon.svg')">
+                    <img [src]="githubSrc" class="w-13 h-13 cursor-pointer" alt="github icon">
+                </a>
+                <a href="https://www.linkedin.com/in/juanes-pachon-web-dev/" target="_blank"
+                    (mouseenter)="changeLinkedinSrc('/assets/icons/linkedin_icon_gold.svg')"
+                    (mouseleave)="changeLinkedinSrc('/assets/icons/linkedin_icon.svg')">
+                    <img [src]="linkedinSrc" class="w-13 h-13 cursor-pointer" alt="linkedin icon">
+                </a>
+            </div>
+        </div>
+    </div>
+
+</section>

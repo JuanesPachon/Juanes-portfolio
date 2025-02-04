@@ -1,5 +1,5 @@
 import { Component, input, SimpleChanges } from '@angular/core';
-import { IProject } from '../../models/project.interface';
+import { IProject } from '../../../../models/project.interface';
 import { RouterLinkWithHref } from '@angular/router';
 
 @Component({

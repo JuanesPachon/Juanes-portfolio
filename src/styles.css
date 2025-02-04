@@ -11,6 +11,8 @@
     --font-jost: "Jost", serif;
     --font-poppins: "Poppins", serif;
 
+    --breakpoint-3xl: 120rem;
+
     --animate-drop-shadow-blink: drop-shadow-blink 1.5s infinite;
     --animate-slide-in: slide-in 1s ease-out;
 

@@ -1,42 +1,10 @@
 <app-header />
 
-<main id="top" class="mt-28 flex flex-col items-center lg:container lg:px-50 lg:mx-auto">
+<main id="top" class="mt-28 flex flex-col items-center lg:max-w-[1400px] xl:max-w-[1600px] lg:px-10 xl:px-40 lg:mx-auto">
 
-    <section class="flex flex-col items-center gap-y-8 mt-5 font-jost font-semibold">
+    <app-hero/>
 
-        <div class="flex flex-col items-center lg:flex-row lg:gap-x-20 lg:mt-12 lg:mb-6">
-            <img rel="preload" src="/assets/icons/juanes_logo.svg" alt="logo" class="w-22 h-22 mb-5 lg:w-70 lg:h-70 lg:order-2 lg:-mr-7
-            drop-shadow-[0_0_5px_#EAC85F] lg:drop-shadow-[0_0_10px_#EAC85F] -z-10 lg:animate-slide-in">
-            <div class="flex flex-col items-center lg:items-start gap-y-7 lg:gap-y-7">
-                <h1 class="text-3xl lg:text-5xl">Juan Esteban Pachón Ruiz</h1>
-                <h2 class="text-2xl -mt-4 lg:-mt-2 lg:text-4xl text-center lg:text-left text-primary-gold">Full-stack developer</h2>
-                <div class="flex flex-col items-center gap-y-6 lg:flex-row lg:gap-x-8">
-                    <button class="bg-primary-blue py-3 px-7 font-poppins rounded-4xl border-2 border-primary-gold hover:bg-hover-blue transition-colors duration-300 ease-in-out cursor-pointer">
-                        Download CV
-                    </button>
-                    <div class="flex items-center gap-x-2">
-                        <img src="assets/icons/open_work.svg" class="w-8 h-8 animate-drop-shadow-blink" alt="open to work icon">
-                        <p>Open to work</p>
-                    </div>
-                </div>
-                <div class="flex items-center gap-x-4 -mt-4 lg:-ml-1 lg:-mt-2">
-                    <a href="https://github.com/JuanesPachon" target="_blank"
-                        (mouseenter)="changeGithubSrc('/assets/icons/github_icon_gold.svg')"
-                        (mouseleave)="changeGithubSrc('/assets/icons/github_icon.svg')">
-                        <img [src]="githubSrc" class="w-13 h-13 cursor-pointer" alt="github icon">
-                    </a>
-                    <a href="https://www.linkedin.com/in/juanes-pachon-web-dev/" target="_blank"
-                        (mouseenter)="changeLinkedinSrc('/assets/icons/linkedin_icon_gold.svg')"
-                        (mouseleave)="changeLinkedinSrc('/assets/icons/linkedin_icon.svg')">
-                        <img [src]="linkedinSrc" class="w-13 h-13 cursor-pointer" alt="linkedin icon">
-                    </a>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-    <div class="flex items-center justify-center w-[90%] lg:w-full my-10">
+    <div class="flex items-center justify-center w-[80%] lg:w-full my-10">
         <div class="h-[2px] bg-primary-gold flex-grow"></div>
         <div class="mx-4">
             <img src="/assets/icons/diamond_icon.svg" class="w-6 h-6" alt="diamond icon">
@@ -44,33 +12,9 @@
         <div class="h-[2px] bg-primary-gold flex-grow"></div>
     </div>
 
-    <section>
-        <h2 class="text-center text-primary-gold text-3xl lg:text-4xl font-jost font-semibold">Skills</h2>
-        <div class="flex gap-x-6 sm:gap-x-10 lg:gap-x-20 mt-8 lg:mt-10">
-            <div class="relative group">
-                <img src="/assets/icons/javascript_icon.svg" class="w-full lg:w-15" alt="javascript icon">
-                <span class="absolute bottom-full left-1/2 transform -translate-x-1/2 bg-primary-blue border-[1px] font-poppins border-gray-700 text-sm px-2 py-1 mb-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200">JavaScript</span>
-            </div>
-            <div class="relative group">
-                <img src="/assets/icons/angular_icon.svg" class="w-full lg:w-15" alt="angular icon">
-                <span class="absolute bottom-full left-1/2 transform -translate-x-1/2 bg-primary-blue border-[1px] font-poppins border-gray-700 text-sm px-2 py-1 mb-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200">Angular</span>
-            </div>
-            <div class="relative group">
-                <img src="/assets/icons/typescript_icon.svg" class="w-full lg:w-15" alt="typescript icon">
-                <span class="absolute bottom-full left-1/2 transform -translate-x-1/2 bg-primary-blue border-[1px] font-poppins border-gray-700 text-sm px-2 py-1 mb-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200">TypeScript</span>
-            </div>
-            <div class="relative group">
-                <img src="/assets/icons/node_icon.svg" class="w-full lg:w-15" alt="node icon">
-                <span class="absolute bottom-full left-1/2 transform -translate-x-1/2 bg-primary-blue border-[1px] font-poppins border-gray-700 text-sm px-2 py-1 mb-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200">NodeJS</span>
-            </div>
-            <div class="relative group">
-                <img src="/assets/icons/tailwind_icon.svg" class="w-full lg:w-15" alt="tailwind icon">
-                <span class="absolute bottom-full left-1/2 transform -translate-x-1/2 bg-primary-blue border-[1px] font-poppins border-gray-700 text-sm px-2 py-1 mb-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200">Tailwind</span>
-            </div>
-        </div>
-    </section>
+    <app-skills/>
 
-    <div class="flex items-center justify-center w-[90%] lg:w-full my-10">
+    <div class="flex items-center justify-center w-[80%] lg:w-full my-10">
         <div class="h-[2px] bg-primary-gold flex-grow"></div>
         <div class="mx-4">
             <img src="/assets/icons/diamond_icon.svg" class="w-6 h-6" alt="diamond icon">
@@ -78,20 +22,22 @@
         <div class="h-[2px] bg-primary-gold flex-grow"></div>
     </div>
 
-    <section id="about-me">
-        <h2 class="text-center text-primary-gold text-3xl lg:text-4xl font-jost font-semibold">About me</h2>
-        <div class="flex flex-col jsutify-center items-center gap-y-2 mt-8 font-jost font-semibold md:flex-row lg:gap-x-5 md:mx-6 lg:mx-0 lg:-my-6">
-            <p class="px-5 text-lg md:max-w-[60%] font-poppins">
-                I am a full stack web developer with specialization in frontend, focused on creating fast, interactive interfaces.
-                and accessible. My approach is based on building mostly single page applications (SPA) optimized with modular code and
-                reusable, prioritizing agile performance and reduced loading times. I implement good practices to ensure 
-                a quality experience.
-            </p>
-            <img src="/assets/images/profile_portfolio.svg" class="w-[80%] lg:w-[60%] h-auto" alt="profile">
+    @defer (on viewport) {
+        <section id="projects">
+            <h2 class="text-center text-primary-gold text-3xl lg:text-4xl font-jost font-semibold">Featured Projects</h2>
+            <div class="my-10 mx-6 flex flex-col gap-y-10 md:grid md:grid-cols-2 md:gap-x-10 z-10 lg:mt-15">
+                @for (project of projects; track project.id) {
+                    <app-project-card [project]="project" />
+                }
+            </div>
+        </section>
+    } @placeholder {
+        <div class="flex justify-center items-center h-50">
+            <p class="text-primary-gold text-3xl font-jost font-semibold">Loading...</p>
         </div>
-    </section>
+    }
 
-    <div class="flex items-center justify-center w-[90%] lg:w-full my-10">
+    <div class="flex items-center justify-center w-[80%] lg:w-full my-10">
         <div class="h-[2px] bg-primary-gold flex-grow"></div>
         <div class="mx-4">
             <img src="/assets/icons/diamond_icon.svg" class="w-6 h-6" alt="diamond icon">
@@ -99,16 +45,20 @@
         <div class="h-[2px] bg-primary-gold flex-grow"></div>
     </div>
 
-    <section id="projects">
-        <h2 class="text-center text-primary-gold text-3xl lg:text-4xl font-jost font-semibold">Featured Projects</h2>
-        <div class="my-10 mx-6 flex flex-col gap-y-10 md:grid md:grid-cols-2 md:gap-x-10 z-10">
-            @for (project of projects; track project.id) {
-                <app-project-card [project]="project" />
+    @defer (on viewport) {
+        <section id="experience" class="mb-2">
+            <h2 class="text-center text-primary-gold text-3xl lg:text-4xl font-jost font-semibold mb-7">Experience</h2>
+            @for (experience of experiences; track experience.id) {
+                <app-experience-item [experience]="experience" />
             }
+        </section>
+    } @placeholder {
+        <div class="flex justify-center items-center h-50">
+            <p class="text-primary-gold text-3xl font-jost font-semibold">Loading...</p>
         </div>
-    </section>
+    }
 
-    <div class="flex items-center justify-center w-[90%] lg:w-full my-10">
+    <div class="flex items-center justify-center w-[80%] lg:w-full my-10">
         <div class="h-[2px] bg-primary-gold flex-grow"></div>
         <div class="mx-4">
             <img src="/assets/icons/diamond_icon.svg" class="w-6 h-6" alt="diamond icon">
@@ -116,14 +66,15 @@
         <div class="h-[2px] bg-primary-gold flex-grow"></div>
     </div>
 
-    <section id="experience" class="mb-2">
-        <h2 class="text-center text-primary-gold text-3xl lg:text-4xl font-jost font-semibold mb-7">Experience</h2>
-        @for (experience of experiences; track experience.id) {
-            <app-experience-item [experience]="experience" />
-        }
-    </section>
+    @defer (on viewport) {
+        <app-about-me/>
+    } @placeholder {
+        <div class="flex justify-center items-center h-50">
+            <p class="text-primary-gold text-3xl font-jost font-semibold">Loading...</p>
+        </div>
+    }
 
-    <div class="flex items-center justify-center w-[90%] lg:w-full my-10">
+    <div class="flex items-center justify-center w-[80%] lg:w-full my-10">
         <div class="h-[2px] bg-primary-gold flex-grow"></div>
         <div class="mx-4">
             <img src="/assets/icons/diamond_icon.svg" class="w-6 h-6" alt="diamond icon">

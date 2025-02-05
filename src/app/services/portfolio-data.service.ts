@@ -13,7 +13,7 @@ export class PortfolioDataService {
 
   isMenuOpen = signal(false); 
 
-  private readonly apiUrl = 'https://kilker1.github.io/Portfolio-Database';
+  private readonly apiUrl = import.meta.env['NG_APP_APIKEY'];
   private http = inject(HttpClient);
 
   getProjects(): Observable<IProject[]> {

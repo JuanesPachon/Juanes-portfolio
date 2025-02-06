@@ -1,6 +1,5 @@
-<header class="fixed top-0 z-10 w-full lg:mx-auto">
-    <nav
-        class="flex justify-between items-center p-3 md:p-5 px-7 m-5 mx-auto max-w-5xl bg-primary-blue/75 backdrop-blur-lg rounded-4xl border-2 border-primary-gold">
+<header class="fixed top-0 z-10 w-full mx-auto px-3 md:px-0">
+    <nav class="flex justify-between items-center p-3 md:p-5 px-7 m-5 mx-auto md:max-w-xl lg:max-w-3xl bg-primary-blue/75 backdrop-blur-lg rounded-4xl border-2 border-primary-gold">
 
         <!-- mobile content -->
         <div (click)="toggleMenu()" class="flex justify-center w-12 h-12 items-center md:hidden cursor-pointer"
@@ -11,28 +10,46 @@
         <!-- desktop content -->
         <div class="hidden md:flex justify-around items-center w-full font-poppins">
             <button class="cursor-pointer relative font-bold group" (click)="scrollToSection('top')">
-                Home
+                {{'navbar.home' | translate}}
                 <span class="absolute left-0 -bottom-1 h-[0.2rem] w-full scale-x-0 bg-primary-gold transition-transform duration-300 ease-out group-hover:scale-x-100"></span>
             </button>
             <button class="cursor-pointer relative font-bold group" (click)="scrollToSection('projects')">
-                Projects
+                {{'navbar.projects' | translate}}
                 <span class="absolute left-0 -bottom-1 h-[0.2rem] w-full scale-x-0 bg-primary-gold transition-transform duration-300 ease-out group-hover:scale-x-100"></span>
             </button>
             <button class="cursor-pointer relative font-bold group" (click)="scrollToSection('experience')">
-                Experience
+                {{'navbar.experience' | translate}}
                 <span class="absolute left-0 -bottom-1 h-[0.2rem] w-full scale-x-0 bg-primary-gold transition-transform duration-300 ease-out group-hover:scale-x-100"></span>
             </button>
             <button class="cursor-pointer relative font-bold group" (click)="scrollToSection('about-me')">
-                About me
+                {{'navbar.about_me' | translate}}
                 <span class="absolute left-0 -bottom-1 h-[0.2rem] w-full scale-x-0 bg-primary-gold transition-transform duration-300 ease-out group-hover:scale-x-100"></span>
             </button>
             <button class="cursor-pointer relative font-bold group" (click)="scrollToSection('contact')">
-                Contact
+                {{'navbar.contact' | translate}}
                 <span class="absolute left-0 -bottom-1 h-[0.2rem] w-full scale-x-0 bg-primary-gold transition-transform duration-300 ease-out group-hover:scale-x-100"></span>
             </button>
         </div>
 
+        <div (click)="translateLanguage()" class="group md:hidden absolute left-22 top-5 rounded-full w-8 h-8 animate-drop-shadow-blink duration-300 hover:ring-2 hover:ring-primary-gold cursor-pointer">
+            <img 
+              [src]="getCurrentLanguage()" 
+              alt="Imagen de perfil"
+              class="w-full h-full object-cover"
+            />
+            <span class="absolute -bottom-11 left-1/2 transform -translate-x-1/2 bg-primary-blue border-[1px] font-poppins border-gray-700 text-sm px-2 py-1 mb-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200">{{'language.title' | translate}}</span>
+        </div>
+
     </nav>
+    
+    <div (click)="translateLanguage()" class="hidden group md:block absolute right-10 top-9 rounded-full w-10 h-10 animate-drop-shadow-blink duration-300 hover:ring-2 hover:ring-primary-gold cursor-pointer">
+        <img 
+          [src]="getCurrentLanguage()" 
+          alt="Imagen de perfil"
+          class="w-full h-full object-cover"
+        />
+        <span class="absolute -bottom-11 left-1/2 transform -translate-x-1/2 bg-primary-blue border-[1px] font-poppins border-gray-700 text-sm px-2 py-1 mb-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200">{{'language.title' | translate}}</span>
+    </div>
 </header>
 
 <app-sidebar/>

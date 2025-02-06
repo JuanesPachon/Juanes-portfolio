@@ -24,7 +24,7 @@
 
     @defer (on viewport) {
         <section id="projects">
-            <h2 class="text-center text-primary-gold text-3xl lg:text-4xl font-jost font-semibold">Featured Projects</h2>
+            <h2 class="text-center text-primary-gold text-3xl lg:text-4xl font-jost font-semibold">{{ 'projects.title' | translate }}</h2>
             <div class="my-10 mx-6 flex flex-col gap-y-10 md:grid md:grid-cols-2 md:gap-x-10 z-10 lg:mt-15">
                 @for (project of projects; track project.id) {
                     <app-project-card [project]="project" />
@@ -33,7 +33,7 @@
         </section>
     } @placeholder {
         <div class="flex justify-center items-center h-50">
-            <p class="text-primary-gold text-3xl font-jost font-semibold">Loading...</p>
+            <p class="text-primary-gold text-3xl font-jost font-semibold">{{ 'loading.title' | translate }}</p>
         </div>
     }
 
@@ -47,14 +47,14 @@
 
     @defer (on viewport) {
         <section id="experience" class="mb-2">
-            <h2 class="text-center text-primary-gold text-3xl lg:text-4xl font-jost font-semibold mb-7">Experience</h2>
+            <h2 class="text-center text-primary-gold text-3xl lg:text-4xl font-jost font-semibold mb-7">{{ 'experience.title' | translate }}</h2>
             @for (experience of experiences; track experience.id) {
                 <app-experience-item [experience]="experience" />
             }
         </section>
     } @placeholder {
         <div class="flex justify-center items-center h-50">
-            <p class="text-primary-gold text-3xl font-jost font-semibold">Loading...</p>
+            <p class="text-primary-gold text-3xl font-jost font-semibold">{{ 'loading.title' | translate }}</p>
         </div>
     }
 
@@ -70,7 +70,7 @@
         <app-about-me/>
     } @placeholder {
         <div class="flex justify-center items-center h-50">
-            <p class="text-primary-gold text-3xl font-jost font-semibold">Loading...</p>
+            <p class="text-primary-gold text-3xl font-jost font-semibold">{{ 'loading.title' | translate }}</p>
         </div>
     }
 
@@ -83,9 +83,9 @@
     </div>
 
     <section id="contact" class="flex flex-col items-center mb-10">
-        <h2 class="text-center text-primary-gold text-3xl lg:text-4xl font-jost font-semibold mb-7 mx-2">Got a project in mind? Let's talk!</h2>
+        <h2 class="text-center text-primary-gold text-3xl lg:text-4xl font-jost font-semibold mb-7 mx-2">{{ 'contact.title' | translate }}</h2>
         <button class="bg-primary-blue py-3 px-7 font-poppins rounded-4xl border-2 border-primary-gold hover:bg-hover-blue transition-colors duration-300 ease-in-out cursor-pointer">
-            Send an email
+            {{ 'contact.contact_button' | translate }}
         </button>
     </section>
 

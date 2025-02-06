@@ -3,27 +3,27 @@
     <div class="flex flex-col items-center text-xl font-jost font-semibold">
         <button class="w-full py-4 text-center hover:bg-hover-blue transition-colors duration-500 ease-in-out rounded-t-4xl relative"
             (click)="scrollToSection('top')">
-            Home
+            {{'navbar.home' | translate}}
             <div class="absolute bottom-0 left-4 right-4 border-b border-primary-gold"></div>
         </button>
         <button class="w-full py-4 text-center hover:bg-hover-blue transition-colors duration-500 ease-in-out relative"
             (click)="scrollToSection('projects')">
-            Projects
+            {{'navbar.projects' | translate}}
             <div class="absolute bottom-0 left-4 right-4 border-b border-primary-gold"></div>
         </button>
         <button class="w-full py-4 text-center hover:bg-hover-blue transition-colors duration-500 ease-in-out relative"
             (click)="scrollToSection('experience')">
-            Experience
+            {{'navbar.experience' | translate}}
             <div class="absolute bottom-0 left-4 right-4 border-b border-primary-gold"></div>
         </button>
         <button class="w-full py-4 text-center hover:bg-hover-blue transition-colors duration-500 ease-in-out relative"
             (click)="scrollToSection('about-me')">
-            About me
+            {{'navbar.about_me' | translate}}
             <div class="absolute bottom-0 left-4 right-4 border-b border-primary-gold"></div>
         </button>
-        <button class="w-full py-4 text-center hover:bg-hover-blue transition-colors duration-500 ease-in-out rounded-b-4xl"
+        <button class="w-full py-4 text-center hover:bg-hover-blue transition-colors duration-500 ease-in-out rounded-b-4xl relative"
             (click)="scrollToSection('contact')">
-            Contact
+            {{'navbar.contact' | translate}}
         </button>
     </div>
 </div>

@@ -1,12 +1,14 @@
 import { Component, inject } from '@angular/core';
 import { PortfolioDataService } from '../../services/portfolio-data.service';
 import { NgClass } from '@angular/common';
+import { TranslationService } from '../../services/translation.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-    selector: 'app-sidebar',
-    imports: [NgClass],
-    templateUrl: './sidebar.component.html',
-    styleUrl: './sidebar.component.css'
+  selector: 'app-sidebar',
+  imports: [NgClass, TranslateModule],
+  templateUrl: './sidebar.component.html',
+  styleUrl: './sidebar.component.css'
 })
 export class SidebarComponent {
 

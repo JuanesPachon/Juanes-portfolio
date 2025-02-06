@@ -9,12 +9,13 @@ import { FooterComponent } from "../../shared/footer/footer.component";
 import { SkillsComponent } from "./components/skills/skills.component";
 import { AboutMeComponent } from "./components/about-me/about-me.component";
 import { HeroComponent } from "./components/hero/hero.component";
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-    selector: 'app-home',
-    imports: [HeaderComponent, ProjectCardComponent, ExperienceItemComponent, FooterComponent, SkillsComponent, AboutMeComponent, HeroComponent],
-    templateUrl: './home.component.html',
-    styleUrl: './home.component.css'
+  selector: 'app-home',
+  imports: [HeaderComponent, ProjectCardComponent, ExperienceItemComponent, FooterComponent, SkillsComponent, AboutMeComponent, HeroComponent, TranslateModule],
+  templateUrl: './home.component.html',
+  styleUrl: './home.component.css'
 })
 export class HomeComponent {
 

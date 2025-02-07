@@ -22,41 +22,14 @@
         <div class="h-[2px] bg-primary-gold flex-grow"></div>
     </div>
 
-    @defer (on viewport) {
-        <section id="projects">
-            <h2 class="text-center text-primary-gold text-3xl lg:text-4xl font-jost font-semibold">{{ 'projects.title' | translate }}</h2>
-            <div class="my-10 mx-6 flex flex-col gap-y-10 md:grid md:grid-cols-2 md:gap-x-10 z-10 lg:mt-15">
-                @for (project of projects; track project.id) {
-                    <app-project-card [project]="project" />
-                }
-            </div>
-        </section>
-    } @placeholder {
-        <div class="flex justify-center items-center h-50">
-            <p class="text-primary-gold text-3xl font-jost font-semibold">{{ 'loading.title' | translate }}</p>
-        </div>
-    }
-
-    <div class="flex items-center justify-center w-[80%] lg:w-full my-10">
-        <div class="h-[2px] bg-primary-gold flex-grow"></div>
-        <div class="mx-4">
-            <img src="/assets/icons/diamond_icon.svg" class="w-6 h-6" alt="diamond icon">
-        </div>
-        <div class="h-[2px] bg-primary-gold flex-grow"></div>
-    </div>
-
-    @defer (on viewport) {
-        <section id="experience" class="mb-2">
-            <h2 class="text-center text-primary-gold text-3xl lg:text-4xl font-jost font-semibold mb-7">{{ 'experience.title' | translate }}</h2>
-            @for (experience of experiences; track experience.id) {
-                <app-experience-item [experience]="experience" />
+    <section id="projects">
+        <h2 class="text-center text-primary-gold text-3xl lg:text-4xl font-jost font-semibold">{{ 'projects.title' | translate }}</h2>
+        <div class="my-10 mx-6 flex flex-col gap-y-10 md:grid md:grid-cols-2 md:gap-x-10 z-10 lg:mt-15">
+            @for (project of projects; track project.id) {
+                <app-project-card [project]="project" />
             }
-        </section>
-    } @placeholder {
-        <div class="flex justify-center items-center h-50">
-            <p class="text-primary-gold text-3xl font-jost font-semibold">{{ 'loading.title' | translate }}</p>
         </div>
-    }
+    </section>
 
     <div class="flex items-center justify-center w-[80%] lg:w-full my-10">
         <div class="h-[2px] bg-primary-gold flex-grow"></div>
@@ -66,13 +39,22 @@
         <div class="h-[2px] bg-primary-gold flex-grow"></div>
     </div>
 
-    @defer (on viewport) {
-        <app-about-me/>
-    } @placeholder {
-        <div class="flex justify-center items-center h-50">
-            <p class="text-primary-gold text-3xl font-jost font-semibold">{{ 'loading.title' | translate }}</p>
+    <section id="experience" class="mb-2">
+        <h2 class="text-center text-primary-gold text-3xl lg:text-4xl font-jost font-semibold mb-7">{{ 'experience.title' | translate }}</h2>
+        @for (experience of experiences; track experience.id) {
+            <app-experience-item [experience]="experience" />
+        }
+    </section>
+
+    <div class="flex items-center justify-center w-[80%] lg:w-full my-10">
+        <div class="h-[2px] bg-primary-gold flex-grow"></div>
+        <div class="mx-4">
+            <img src="/assets/icons/diamond_icon.svg" class="w-6 h-6" alt="diamond icon">
         </div>
-    }
+        <div class="h-[2px] bg-primary-gold flex-grow"></div>
+    </div>
+
+    <app-about-me/>
 
     <div class="flex items-center justify-center w-[80%] lg:w-full my-10">
         <div class="h-[2px] bg-primary-gold flex-grow"></div>

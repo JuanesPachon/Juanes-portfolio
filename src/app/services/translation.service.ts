@@ -1,5 +1,4 @@
-import { isPlatformBrowser } from '@angular/common';
-import { inject, Injectable, PLATFORM_ID } from '@angular/core';
+import { inject, Injectable, signal } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Injectable({
@@ -8,27 +7,16 @@ import { TranslateService } from '@ngx-translate/core';
 export class TranslationService {
 
   private translateService = inject(TranslateService);
-  private platformId = inject(PLATFORM_ID);
+
+  private currentLang = signal('en');
 
   translateLanguage(): void {
-    if (isPlatformBrowser(this.platformId)) {
-      const currentLang = localStorage.getItem('lang') || 'en';
-
-      const newLang = currentLang === 'en' ? 'es' : 'en';
-
-      localStorage.setItem('lang', newLang);
-
-      this.translateService.use(newLang);
-    } else {
-      this.translateService.use('en');
-    }
+    this.currentLang() === 'en' ? this.currentLang.set('es') : this.currentLang.set('en');
+    this.translateService.use(this.currentLang());
   }
 
   getCurrentLanguage(): string {
-    if (isPlatformBrowser(this.platformId)) {
-      return localStorage.getItem('lang') || 'en';
-    }
-    return 'en';
+    return this.currentLang();
   }
 
 }

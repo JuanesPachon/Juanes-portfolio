@@ -13,7 +13,7 @@ export class PortfolioDataService {
 
   isMenuOpen = signal(false); 
 
-  private readonly apiUrl = import.meta.env['NG_APP_APIKEY'];
+  private readonly apiUrl = 'https://portfolio-server-kilker1.vercel.app'
   private http = inject(HttpClient);
 
   getProjects(): Observable<IProject[]> {

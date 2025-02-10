@@ -30,4 +30,10 @@ export class PortfolioDataService {
     return this.http.get<IExperience[]>(`${this.apiUrl}/experiences.json`);
   }
 
+  getCurriculumVitae(): Observable<Blob> {
+    return this.http.get(`${this.apiUrl}/cv_juan_pachon_full_stack_web_developer.pdf`, {
+      responseType: 'blob'
+    })
+  }
+
 }
